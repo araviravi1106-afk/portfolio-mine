@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aravindh S | CSE Developer Portfolio</title>
+  <meta name="description" content="Aravindh S - Computer Science Engineering Student | Full Stack MERN Developer | AI/ML Enthusiast">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-bracket">&lt;</span><span class="logo-name">Aravindh</span><span class="logo-bracket">/&gt;</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <!-- ★ REPLACE: Add your resume Google Drive or hosted PDF link below -->
+  <a href="YOUR_RESUME_LINK_HERE" target="_blank" class="nav-cta" id="resumeBtn">Resume ↗</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#hero" class="mobile-link">Home</a></li>
+    <li><a href="#about" class="mobile-link">About</a></li>
+    <li><a href="#skills" class="mobile-link">Skills</a></li>
+    <li><a href="#projects" class="mobile-link">Projects</a></li>
+    <li><a href="#experience" class="mobile-link">Experience</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="badge-dot"></span>Open to Internships & Opportunities</div>
+    <h1 class="hero-title">
+      <span class="hero-greeting">Hi, I'm</span>
+      <span class="hero-name">Aravindh S</span>
+      <span class="hero-role">
+        <span class="role-prefix">CSE Student &amp;&nbsp;</span>
+        <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+      </span>
+    </h1>
+    <p class="hero-desc">
+      Building intelligent full-stack applications at the intersection of
+      <span class="accent">AI/ML</span>, <span class="accent">MERN Stack</span>, and
+      <span class="accent">Cloud Deployment</span>. Based in Auroville, Puducherry.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-target="5">5</span><span class="stat-label">Projects Built</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="15">15</span><span class="stat-label">Technologies</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="8">8</span><span class="stat-label">CGPA Score</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">// about_me</span>
+      <h2 class="section-title">Who I Am</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-visual">
+        <canvas id="aboutCanvas"></canvas>
+        <div class="about-card-float"><span>🎓</span><span>B.E CSE @ Mailam</span></div>
+        <div class="about-card-float float-2"><span>📍</span><span>Auroville, Puducherry</span></div>
+      </div>
+      <div class="about-text">
+        <p class="about-lead">
+          Enthusiastic and detail-oriented CSE student with hands-on experience in
+          AI-powered applications, MERN stack development, and cloud deployment.
+        </p>
+        <p class="about-body">
+          I specialize in building <strong>RAG-based AI systems</strong> using LangChain, FAISS,
+          and LLMs, alongside scalable <strong>MERN stack applications</strong> deployed to
+          production on Vercel and Render. I turn ideas into working, deployed products.
+        </p>
+        <p class="about-body">
+          Currently in my final year at <strong>Mailam Engineering College</strong> (2022–2026)
+          with a CGPA of <strong>8.36</strong>, actively building real-world projects and seeking
+          opportunities to contribute to innovative teams.
+        </p>
+        <div class="about-edu">
+          <div class="edu-row">
+            <span class="edu-year">2022–2026</span>
+            <div><strong>B.E – Computer Science Engineering</strong><br><span>Mailam Engineering College &nbsp;·&nbsp; CGPA: 8.36</span></div>
+          </div>
+          <div class="edu-row">
+            <span class="edu-year">2021–2022</span>
+            <div><strong>HSC (12th)</strong><br><span>Kuyilapalayam Hr. Sec. School &nbsp;·&nbsp; 81%</span></div>
+          </div>
+          <div class="edu-row">
+            <span class="edu-year">2019–2020</span>
+            <div><strong>SSLC (10th)</strong><br><span>SVV Higher Secondary School &nbsp;·&nbsp; 91%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills" id="skills">
+  <div class="skills-canvas-wrap"></div>
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">// tech_stack</span>
+      <h2 class="section-title">Skills & Technologies</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category" data-delay="0">
+        <div class="skill-cat-header"><span class="skill-cat-icon">💻</span><h3>Languages</h3></div>
+        <div class="skill-tags">
+          <span class="stag">Python</span><span class="stag">JavaScript</span><span class="stag">Java</span><span class="stag">C</span>
+        </div>
+      </div>
+      <div class="skill-category" data-delay="100">
+        <div class="skill-cat-header"><span class="skill-cat-icon">🎨</span><h3>Frontend</h3></div>
+        <div class="skill-tags">
+          <span class="stag">React.js</span><span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">Bootstrap</span>
+        </div>
+      </div>
+      <div class="skill-category" data-delay="200">
+        <div class="skill-cat-header"><span class="skill-cat-icon">⚙️</span><h3>Backend</h3></div>
+        <div class="skill-tags">
+          <span class="stag">Node.js</span><span class="stag">Express.js</span><span class="stag">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-category" data-delay="300">
+        <div class="skill-cat-header"><span class="skill-cat-icon">🗄️</span><h3>Database</h3></div>
+        <div class="skill-tags">
+          <span class="stag">MongoDB</span><span class="stag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-category skill-category--wide" data-delay="400">
+        <div class="skill-cat-header"><span class="skill-cat-icon">🤖</span><h3>AI / ML Technologies</h3></div>
+        <div class="skill-tags">
+          <span class="stag stag--ai">LangChain</span>
+          <span class="stag stag--ai">RAG</span>
+          <span class="stag stag--ai">FAISS</span>
+          <span class="stag stag--ai">Sentence Transformers</span>
+          <span class="stag stag--ai">Groq API</span>
+          <span class="stag stag--ai">Ollama</span>
+          <span class="stag">NLP</span>
+          <span class="stag">Prompt Engineering</span>
+          <span class="stag">Machine Learning</span>
+        </div>
+      </div>
+      <div class="skill-category" data-delay="500">
+        <div class="skill-cat-header"><span class="skill-cat-icon">🛠️</span><h3>Tools & Platforms</h3></div>
+        <div class="skill-tags">
+          <span class="stag">Git</span><span class="stag">GitHub</span><span class="stag">VS Code</span>
+          <span class="stag">Streamlit</span><span class="stag">Render</span><span class="stag">Vercel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="projects" id="projects">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">// featured_work</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <!-- PROJECT 1: Lumina Craft -->
+      <div class="project-card project-card--featured" data-index="0">
+        <div class="project-card-glow"></div>
+        <div class="project-badge">Featured · MERN</div>
+        <div class="project-header">
+          <div class="project-icon">🛍️</div>
+          <div class="project-links">
+            <!-- ★ REPLACE: Lumina Craft live site URL -->
+            <a href="https://lumina-craft-umber.vercel.app/" target="_blank" class="proj-link live-link">↗ Live Demo</a>
+            <!-- ★ REPLACE: Lumina Craft GitHub repo URL -->
+            <a href="https://github.com/araviravi1106-afk/lumina-craft" target="_blank" class="proj-link git-link">⌥ GitHub</a>
+          </div>
+        </div>
+        <h3 class="project-title">Lumina Craft</h3>
+        <p class="project-subtitle">Full Stack MERN E-Commerce Platform</p>
+        <p class="project-desc">
+          Fully responsive MERN stack web application with modern UI/UX and dynamic
+          product management. Frontend on Vercel, backend on Render for production-grade accessibility.
+        </p>
+        <ul class="project-features">
+          <li>Frontend–backend integration via REST APIs & MongoDB</li>
+          <li>Reusable React components with responsive layouts</li>
+          <li>Production deployment on Vercel + Render</li>
+          <li>Environment config & API hosting workflow</li>
+        </ul>
+        <div class="project-tech">
+          <span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span><span>Vercel</span><span>Render</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: AI Resume Chatbot -->
+      <div class="project-card project-card--featured" data-index="1">
+        <div class="project-card-glow glow-purple"></div>
+        <div class="project-badge project-badge--ai">Featured · AI/RAG</div>
+        <div class="project-header">
+          <div class="project-icon">🤖</div>
+          <div class="project-links">
+            <!-- ★ REPLACE: AI Chatbot Streamlit live URL -->
+            <a href="https://ai-resume-chatbot-m7srpy3cdjshqwq49czatw.streamlit.app/" target="_blank" class="proj-link live-link">↗ Live Demo</a>
+            <!-- ★ REPLACE: AI Chatbot GitHub repo URL -->
+            <a href="https://github.com/araviravi1106-afk/ai-resume-chatbot" target="_blank" class="proj-link git-link">⌥ GitHub</a>
+          </div>
+        </div>
+        <h3 class="project-title">AI Resume Chatbot</h3>
+        <p class="project-subtitle">RAG-Based Intelligent Q&A System</p>
+        <p class="project-desc">
+          AI-powered chatbot for intelligent resume question answering using RAG
+          architecture with Groq LLaMA 3 for fast inference and QR-based public accessibility.
+        </p>
+        <ul class="project-features">
+          <li>FAISS vector database + Sentence Transformers embeddings</li>
+          <li>Engineered prompt templates for interview-style responses</li>
+          <li>Deployed on Streamlit Cloud with QR accessibility</li>
+          <li>Groq LLaMA 3 API for optimized inference</li>
+        </ul>
+        <div class="project-tech">
+          <span>Python</span><span>LangChain</span><span>FAISS</span><span>Sentence Transformers</span><span>Groq LLaMA 3</span><span>Streamlit</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: Productivity App -->
+      <div class="project-card" data-index="2">
+        <div class="project-header">
+          <div class="project-icon">📱</div>
+          <div class="project-links">
+            <!-- ★ REPLACE: Productivity App GitHub repo URL -->
+            <a href="https://github.com/araviravi1106-afk/positive-life-webapp" target="_blank" class="proj-link git-link">⌥ GitHub</a>
+          </div>
+        </div>
+        <h3 class="project-title">Personal Productivity App</h3>
+        <p class="project-subtitle">Multi-Utility React Application</p>
+        <p class="project-desc">
+          Multi-utility platform with clock, alarm, calendar, notes, QR scanner,
+          image locker, habit tracker, and speech-to-text. Optimized state management.
+        </p>
+        <div class="project-tech">
+          <span>React.js</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: ATM Simulation -->
+      <div class="project-card" data-index="3">
+        <div class="project-header">
+          <div class="project-icon">🏦</div>
+          <div class="project-links">
+            <!-- ★ REPLACE: ATM Simulation GitHub repo URL -->
+            <a href="https://github.com/jagadeeshwaranb-eng/Atm-Simulation" target="_blank" class="proj-link git-link">⌥ GitHub</a>
+          </div>
+        </div>
+        <h3 class="project-title">ATM Simulation System</h3>
+        <p class="project-subtitle">Java Banking Application</p>
+        <p class="project-desc">
+          Secure banking simulation with PIN authentication, balance enquiry,
+          withdrawal and deposit using JDBC database integration and OOP principles.
+        </p>
+        <div class="project-tech">
+          <span>Java</span><span>JDBC</span><span>SQL</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 5: Portfolio Website -->
+      <div class="project-card project-card--portfolio" data-index="4">
+        <div class="project-header">
+          <div class="project-icon">🌐</div>
+          <div class="project-links">
+            <!-- ★ REPLACE: This portfolio's live GitHub Pages URL (e.g. https://araviravi1106.github.io) -->
+            <a href="YOUR_PORTFOLIO_LIVE_LINK_HERE" target="_blank" class="proj-link live-link">↗ Live</a>
+            <!-- ★ REPLACE: This portfolio's GitHub repo URL -->
+            <a href="YOUR_PORTFOLIO_GITHUB_LINK_HERE" target="_blank" class="proj-link git-link">⌥ GitHub</a>
+          </div>
+        </div>
+        <h3 class="project-title">Personal Portfolio Website</h3>
+        <p class="project-subtitle">HTML5 · CSS3 · JS · GitHub Pages</p>
+        <p class="project-desc">
+          Responsive personal portfolio with 3D Three.js animations showcasing projects,
+          technical skills, achievements, and contact info. Hosted on GitHub Pages.
+        </p>
+        <div class="project-tech">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Three.js</span><span>GitHub Pages</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="experience" id="experience">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">// experience</span>
+      <h2 class="section-title">Experience & Journey</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-index="0">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024 – Present</span>
+          <h3>Freelance / Personal Development Projects</h3>
+          <p>
+            Built and deployed AI-powered and MERN stack applications independently.
+            Experienced in frontend/backend integration, API handling, and cloud deployment
+            workflows. Practiced Git-based version control and collaborative development.
+          </p>
+          <div class="timeline-tags">
+            <span>MERN Stack</span><span>AI/ML</span><span>Cloud Deployment</span><span>Git</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item" data-index="1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2022 – 2026</span>
+          <h3>B.E – Computer Science Engineering</h3>
+          <p>
+            Pursuing Bachelor's in CSE at Mailam Engineering College with a CGPA of 8.36.
+            Focused on software engineering, data structures, algorithms, and emerging AI
+            technologies while building a strong project portfolio independently.
+          </p>
+          <div class="timeline-tags">
+            <span>CGPA: 8.36</span><span>CSE</span><span>Mailam Engineering College</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item" data-index="2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024</span>
+          <h3>Google Machine Learning Crash Course</h3>
+          <p>
+            Completed Google's Machine Learning Crash Course certification, strengthening
+            foundational knowledge in ML algorithms, model training, and evaluation.
+          </p>
+          <div class="timeline-tags">
+            <span>Google</span><span>Machine Learning</span><span>Certification</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section class="achievements" id="achievements">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">// milestones</span>
+      <h2 class="section-title">Achievements</h2>
+    </div>
+    <div class="achievements-grid">
+      <div class="ach-card" data-index="0"><div class="ach-icon">🚀</div><h4>Live AI Deployment</h4><p>Deployed AI Resume Chatbot publicly using Streamlit Cloud with QR-based accessibility</p></div>
+      <div class="ach-card" data-index="1"><div class="ach-icon">🌐</div><h4>MERN Production App</h4><p>Built and deployed full-stack MERN application on Render + Vercel with real production workflow</p></div>
+      <div class="ach-card" data-index="2"><div class="ach-icon">🎓</div><h4>Google ML Certified</h4><p>Completed Google Machine Learning Crash Course certification</p></div>
+      <div class="ach-card" data-index="3"><div class="ach-icon">🤖</div><h4>RAG Architecture</h4><p>Independently implemented end-to-end RAG pipeline with LangChain, FAISS & LLMs</p></div>
+      <div class="ach-card" data-index="4"><div class="ach-icon">💻</div><h4>Open Source GitHub</h4><p>Active GitHub portfolio with AI and web development projects and contributions</p></div>
+      <div class="ach-card" data-index="5"><div class="ach-icon">📦</div><h4>Multi-Platform Delivery</h4><p>Shipped apps across Vercel, Render, and Streamlit Cloud platforms independently</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">// get_in_touch</span>
+      <h2 class="section-title">Let's Connect</h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-left">
+        <p class="contact-intro">
+          I'm actively looking for <strong>internships, collaborations, and entry-level
+          opportunities</strong>. Whether you have a project idea or want to say hi —
+          my inbox is always open.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:araviravi1106@gmail.com" class="contact-item">
+            <span class="contact-item-icon">✉️</span>
+            <div>
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-value">araviravi1106@gmail.com</span>
+            </div>
+          </a>
+          <!-- ★ REPLACE: Your GitHub profile URL -->
+          <a href="https://github.com/araviravi1106-afk" target="_blank" class="contact-item">
+            <span class="contact-item-icon">⌥</span>
+            <div>
+              <span class="contact-item-label">GitHub</span>
+              <span class="contact-item-value">github.com/ARAVINDH</span>
+            </div>
+          </a>
+          <!-- ★ REPLACE: Your LinkedIn profile URL -->
+          <a href="https://www.linkedin.com/in/aravindh-s-236273331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-item">
+            <span class="contact-item-icon">💼</span>
+            <div>
+              <span class="contact-item-label">LinkedIn</span>
+              <span class="contact-item-value">linkedin.com/in/
+              ARAVINDH
+              </span>
+            </div>
+          </a>
+          <!-- ★ REPLACE: Your portfolio live URL once deployed -->
+          <a href="YOUR_PORTFOLIO_LIVE_LINK_HERE" target="_blank" class="contact-item">
+            <span class="contact-item-icon">🌐</span>
+            <div>
+              <span class="contact-item-label">Portfolio</span>
+              <span class="contact-item-value">ARAVINDH.github.io</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="contact-card">
+          <div class="contact-card-top"><span class="cc-status">● Open to Work</span></div>
+          <div class="contact-card-body">
+            <div class="cc-row"><span>Name</span><span>Aravindh S</span></div>
+            <div class="cc-row"><span>Role</span><span>Full Stack / AI Developer</span></div>
+            <div class="cc-row"><span>Type</span><span>Internship / Full-time</span></div>
+            <div class="cc-row"><span>Location</span><span>Auroville, Puducherry</span></div>
+            <div class="cc-row"><span>Availability</span><span class="cc-available">● Immediate</span></div>
+          </div>
+          <a href="mailto:araviravi1106@gmail.com" class="btn-primary cc-btn">Send Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo"><span class="logo-bracket">&lt;</span><span class="logo-name">Aravindh</span><span class="logo-bracket">/&gt;</span></div>
+    <p class="footer-text">Designed & Built by <strong>Aravindh S</strong></p>
+    <p class="footer-copy">© 2025 · B.E CSE · Mailam Engineering College · All rights reserved</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
